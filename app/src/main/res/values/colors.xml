@@ -8,24 +8,25 @@
     <color name="grey">#808080</color>
     <color name="dark_red">#A51B0B</color>
     <color name="dark_red2">#8B0000</color>
-    <color name="trans">#00000000 </color>
+    <color name="trans">#00000000</color>
 
-    <color name="type_normal">#808080</color>
-    <color name="type_fighting">#E0306A</color>
-    <color name="type_fire">#FF9741</color>
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-<!--    <color name="dark_red2">#8B0000</color>-->
-
+    <color name="normal">#585858</color>
+    <color name="fighting">#CE5798</color>
+    <color name="fire">#D04839</color>
+    <color name="ice">#49D5BA</color>
+    <color name="ground">#A24E3A</color>
+    <color name="poison">#5100D4</color>
+    <color name="psychic">#F08B9D</color>
+    <color name="grass">#328823</color>
+    <color name="rock">#503A2C</color>
+    <color name="steel">#6C80A2</color>
+    <color name="water">#56B8FA</color>
+    <color name="dark">#1D1D1D</color>
+    <color name="dragon">#006DC2</color>
+    <color name="electric">#EFE273</color>
+    <color name="flying">#0D2F59</color>
+    <color name="ghost">#0C142F</color>
+    <color name="bug">#87A17A</color>
+    <color name="fairy">#FFC2F4</color>
 
 </resources>

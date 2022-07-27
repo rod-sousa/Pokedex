@@ -1,5 +1,7 @@
 package rodsousa.dev.br.pokedex.model;
 
+import android.util.Log;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -23,7 +25,6 @@ public class Pokemon {
     private ArrayList<StatPokemon> pokemonStrength;
 
 
-
     public ArrayList<StatPokemon> getStats() {
         return pokemonStrength;
     }
@@ -40,73 +41,46 @@ public class Pokemon {
         return name;
     }
 
-    public int getHeight() {
-        return height;
+    public String getHeight() {
+        double heightInMeter = height*0.1;
+        String heightString = String.format("%.2f", heightInMeter);
+        heightString = heightString.replace(".", ",");
+
+        return heightString + "m";
     }
 
-    public int getWeight() {
-        return weight;
+    public String getWeight() {
+        double weightInKilograms = weight*0.1;
+        String weightString = String.format("%.1f", weightInKilograms);
+        weightString = weightString.replace(".", ",");
+
+        return weightString + "kg";
     }
 
     public String getImage() {
         return imagePokemon.getImagePokemon().getDream_world().getFront_default();
     }
 
-    public int getIconMainType() {
-        if(characteristic.get(0).getType().getName().equals("normal")){
-            return R.drawable.ic_type_normal;
+    public String getIconMainTypeString() {
+        String baseCodeImage = "ic_type_";
+        String primaryType = characteristic.get(0).getType().getName();
+        return baseCodeImage + primaryType;
+    }
+
+    public String primaryType(){
+        return characteristic.get(0).getType().getName();
+    }
+
+    public String secondaryType(){
+        if (characteristic.size() > 1){
+            return characteristic.get(1).getType().getName();
         }
-        if(characteristic.get(0).getType().getName().equals("fighting")){
-            return R.drawable.ic_type_fighting;
-        }
-        if(characteristic.get(0).getType().getName().equals("flying")){
-            return R.drawable.ic_type_flying;
-        }
-        if(characteristic.get(0).getType().getName().equals("poison")){
-            return R.drawable.ic_type_poison;
-        }
-        if(characteristic.get(0).getType().getName().equals("ground")){
-            return R.drawable.ic_type_ground;
-        }
-        if(characteristic.get(0).getType().getName().equals("rock")){
-            return R.drawable.ic_type_rock;
-        }
-        if(characteristic.get(0).getType().getName().equals("bug")){
-            return R.drawable.ic_type_bug;
-        }
-        if(characteristic.get(0).getType().getName().equals("ghost")){
-            return R.drawable.ic_type_ghost;
-        }
-        if(characteristic.get(0).getType().getName().equals("steel")){
-            return R.drawable.ic_type_steel;
-        }
-        if(characteristic.get(0).getType().getName().equals("fire")){
-            return R.drawable.ic_type_fire;
-        }
-        if(characteristic.get(0).getType().getName().equals("water")){
-            return R.drawable.ic_type_water;
-        }
-        if(characteristic.get(0).getType().getName().equals("grass")){
-            return R.drawable.ic_type_grass;
-        }
-        if(characteristic.get(0).getType().getName().equals("electric")){
-            return R.drawable.ic_type_electric;
-        }
-        if(characteristic.get(0).getType().getName().equals("psychic")){
-            return R.drawable.ic_type_psychic;
-        }
-        if(characteristic.get(0).getType().getName().equals("ice")){
-            return R.drawable.ic_type_ice;
-        }
-        if(characteristic.get(0).getType().getName().equals("dragon")){
-            return R.drawable.ic_type_dragon;
-        }
-        if(characteristic.get(0).getType().getName().equals("dark")){
-            return R.drawable.ic_type_dark;
-        }
-        if(characteristic.get(0).getType().getName().equals("fairy")){
-            return R.drawable.ic_type_fairy;
-        }
-        return 0;
+        return "";
+    }
+
+    public String getBackgroundPokemonSelected(){
+        String baseCodeImage = "background_";
+        String backgroundType = characteristic.get(0).getType().getName();
+        return baseCodeImage + backgroundType;
     }
 }

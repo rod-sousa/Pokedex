@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.squareup.picasso.Picasso;
 
+import rodsousa.dev.br.pokedex.R;
 import rodsousa.dev.br.pokedex.databinding.FragmentPokemonSelectBinding;
 import rodsousa.dev.br.pokedex.model.Pokemon;
 import rodsousa.dev.br.pokedex.ui.viewmodel.PokemonViewModel;
@@ -43,10 +44,39 @@ public class PokemonSelectFragment extends DialogFragment {
     }
 
     private void bindsFields(Pokemon pokemon) {
-        if (pokemon != null){
+        if (pokemon != null) {
             binding.nomePokemon.setText(pokemon.getName());
-            binding.icType.setImageResource(pokemon.getIconMainType());
+
+            String iconMainTypeString = pokemon.getIconMainTypeString();
+            int idResourceDrawable = getActivity().getResources().getIdentifier
+                    (iconMainTypeString, "drawable", getActivity().getPackageName());
+            binding.icType.setImageResource(idResourceDrawable);
+
             Picasso.get().load(pokemon.getImage()).into(binding.imagemPokemon);
+
+            String backgroundType = pokemon.getBackgroundPokemonSelected();
+            int idResourceBackground = getActivity().getResources().getIdentifier
+                    (backgroundType, "drawable", getActivity().getPackageName());
+            binding.backgorundType.setImageResource(idResourceBackground);
+
+            binding.idPokemon.setText(pokemon.getIdFormated());
+
+            String primaryType = pokemon.primaryType();
+            binding.txtTypePrimary.setText(primaryType);
+            int idColorPrimary = getResources().getIdentifier
+                    (primaryType, "color", getActivity().getPackageName());
+            binding.txtTypePrimary.setTextColor(getResources().getColor(idColorPrimary));
+
+            String secondaryType = pokemon.secondaryType();
+            if (!secondaryType.equals("")) {
+                binding.txtTypeSecondary.setText(secondaryType);
+                int idColorSecondary = getResources().getIdentifier
+                        (secondaryType, "color", getActivity().getPackageName());
+                binding.txtTypeSecondary.setTextColor(getResources().getColor(idColorSecondary));
+            }
+
+            binding.txtValueHeight.setText(pokemon.getHeight());
+            binding.txtValueWeight.setText(pokemon.getWeight());
         }
     }
 

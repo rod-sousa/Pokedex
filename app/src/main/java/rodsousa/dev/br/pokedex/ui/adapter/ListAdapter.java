@@ -46,7 +46,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
         Pokemon pokemon = listaPokemon.get(position);
-        holder.binds(pokemon, listener);
+        holder.binds(pokemon, listener, context);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         return listaPokemon.size();
     }
 
-    public void updateListAdapter(ArrayList<Pokemon> listPokemon){
+    public void updateListAdapter(ArrayList<Pokemon> listPokemon) {
         Log.i("TAG", "" + listPokemon.size());
         this.listaPokemon = listPokemon;
         notifyDataSetChanged();
@@ -75,17 +75,24 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
             typePokemon = itemView.findViewById(R.id.type_pokemon);
         }
 
-        public void binds(Pokemon pokemon, OnItemClickListener listener) {
-            preencheCampos(pokemon);
+        public void binds(Pokemon pokemon, OnItemClickListener listener, Context context) {
+            preencheCampos(pokemon, context);
 
             itemView.setOnClickListener(view -> listener.onItemClick(pokemon));
         }
 
-        private void preencheCampos(Pokemon pokemon) {
+        private void preencheCampos(Pokemon pokemon, Context context) {
             namePokemon.setText(pokemon.getName());
             idPokemon.setText(pokemon.getIdFormated());
-            typePokemon.setImageResource(pokemon.getIconMainType());
+
+            String iconMainTypeString = pokemon.getIconMainTypeString();
+            typePokemon.setImageResource(getDrawable(context, iconMainTypeString));
+
             Picasso.get().load(pokemon.getImage()).into(imagePokemon);
+        }
+
+        public static int getDrawable(Context context, String name) {
+            return context.getResources().getIdentifier(name, "drawable", context.getPackageName());
         }
     }
 }
