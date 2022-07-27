@@ -4,24 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="350dp"
-    android:layout_height="400dp"
+    android:layout_height="430dp"
     app:cardCornerRadius="18dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="350dp"
+        android:layout_height="430dp">
 
         <ImageView
             android:id="@+id/backgorund_type"
             android:layout_width="wrap_content"
-            android:layout_height="400dp"
+            android:layout_height="225dp"
             android:scaleType="matrix"
-            tools:src="@drawable/background_fairy"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@drawable/background_fairy" />
 
         <ImageView
             android:id="@+id/ic_type"
@@ -29,11 +30,11 @@
             android:layout_height="30dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            tools:src="@drawable/ic_type_fairy"
             app:layout_constraintEnd_toEndOf="@id/backgorund_type"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/backgorund_type"
-            app:layout_constraintTop_toTopOf="@id/backgorund_type" />
+            app:layout_constraintTop_toTopOf="@id/backgorund_type"
+            tools:src="@drawable/ic_type_fairy" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imagem_pokemon"
@@ -41,11 +42,11 @@
             android:layout_height="150dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="42dp"
-            tools:src="@drawable/pokemon_example"
             app:layout_constraintEnd_toStartOf="@id/nome_pokemon"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/pokemon_example" />
 
         <TextView
             android:id="@+id/id_pokemon"
@@ -54,14 +55,15 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/nunito_bold"
-            tools:text="#038"
-            android:layout_marginEnd="8dp"
             android:textColor="@color/grey"
             android:textSize="16sp"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@id/nome_pokemon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/nome_pokemon"
-            app:layout_constraintTop_toTopOf="@id/nome_pokemon" />
+            app:layout_constraintTop_toTopOf="@id/nome_pokemon"
+            tools:text="#038" />
 
         <TextView
             android:id="@+id/nome_pokemon"
@@ -69,14 +71,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/nunito_bold"
-            tools:text="Clefairy"
             android:textColor="@color/black"
             android:textSize="28sp"
             app:layout_constraintEnd_toStartOf="@+id/id_pokemon"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toEndOf="@+id/imagem_pokemon"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Clefairy" />
 
         <TextView
             android:id="@+id/txt_type_primary"
@@ -84,11 +86,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/nunito_bold"
-            tools:text="Fire"
-            tools:textColor="@color/fire"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@id/nome_pokemon"
-            app:layout_constraintTop_toBottomOf="@id/nome_pokemon" />
+            app:layout_constraintTop_toBottomOf="@id/nome_pokemon"
+            tools:text="Fire"
+            tools:textColor="@color/fire" />
 
         <TextView
             android:id="@+id/txt_type_secondary"
@@ -96,18 +98,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:fontFamily="@font/nunito_bold"
-            tools:text="Fighting"
-            tools:textColor="@color/fighting"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/txt_type_primary"
-            app:layout_constraintTop_toTopOf="@id/txt_type_primary" />
+            app:layout_constraintTop_toTopOf="@id/txt_type_primary"
+            tools:text="Fighting"
+            tools:textColor="@color/fighting" />
 
         <TextView
             android:id="@+id/txt_height"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="48dp"
             android:fontFamily="@font/nunito_medium"
             android:text="Altura"
             android:textColor="@color/grey"
@@ -120,12 +122,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_bold"
-            tools:text="2m"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/txt_height"
-            app:layout_constraintTop_toBottomOf="@id/txt_height" />
+            app:layout_constraintTop_toBottomOf="@id/txt_height"
+            tools:text="2m" />
 
         <TextView
             android:id="@+id/txt_weight"
@@ -144,17 +146,227 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_bold"
-            tools:text="60kg"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/txt_weight"
-            app:layout_constraintTop_toBottomOf="@id/txt_weight" />
+            app:layout_constraintTop_toBottomOf="@id/txt_weight"
+            tools:text="60kg" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Estatística"-->
+        <TextView
+            android:id="@+id/txt_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Estatísticas:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/backgorund_type"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/backgorund_type"
+            app:layout_constraintTop_toBottomOf="@id/backgorund_type" />
+
+        <TextView
+            android:id="@+id/txt_hp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="HP"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/txt_stats"
+            app:layout_constraintTop_toBottomOf="@id/txt_stats" />
+
+        <TextView
+            android:id="@+id/txt_attack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Ataque"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/txt_hp"
+            app:layout_constraintTop_toBottomOf="@id/txt_hp" />
+
+        <TextView
+            android:id="@+id/txt_defense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Defesa"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/txt_attack"
+            app:layout_constraintTop_toBottomOf="@id/txt_attack" />
+
+        <TextView
+            android:id="@+id/txt_sp_attack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Sp. ataque"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/txt_defense"
+            app:layout_constraintTop_toBottomOf="@id/txt_defense" />
+
+        <TextView
+            android:id="@+id/txt_sp_defense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Sp. defesa"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/txt_sp_attack"
+            app:layout_constraintTop_toBottomOf="@id/txt_sp_attack" />
+
+        <TextView
+            android:id="@+id/txt_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Velocidade"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/txt_sp_defense"
+            app:layout_constraintTop_toBottomOf="@id/txt_sp_defense" />
+
+        <ImageView
+            android:id="@+id/background_progress_hp"
+            android:layout_width="220dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="72dp"
+            android:alpha="0.2"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_hp"
+            app:layout_constraintStart_toEndOf="@id/txt_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_hp"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/background_progress_attack"
+            android:layout_width="220dp"
+            android:layout_height="5dp"
+            android:alpha="0.2"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_attack"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_attack"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/background_progress_defense"
+            android:layout_width="220dp"
+            android:layout_height="5dp"
+            android:alpha="0.2"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_defense"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_defense"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/background_progress_sp_attack"
+            android:layout_width="220dp"
+            android:layout_height="5dp"
+            android:alpha="0.2"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_sp_attack"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_sp_attack"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/background_progress_sp_defense"
+            android:layout_width="220dp"
+            android:layout_height="5dp"
+            android:alpha="0.2"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_sp_defense"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_sp_defense"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/background_progress_speed"
+            android:layout_width="220dp"
+            android:layout_height="5dp"
+            android:alpha="0.2"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_speed"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_speed"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/progress_hp"
+            android:layout_width="1dp"
+            android:layout_height="5dp"
+            android:layout_marginStart="72dp"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_hp"
+            app:layout_constraintStart_toEndOf="@id/txt_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_hp"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/progress_attack"
+            android:layout_width="1dp"
+            android:layout_height="5dp"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_attack"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_attack"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/progress_defense"
+            android:layout_width="1dp"
+            android:layout_height="5dp"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_defense"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_defense"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/progress_sp_attack"
+            android:layout_width="1dp"
+            android:layout_height="5dp"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_sp_attack"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_sp_attack"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/progress_sp_defense"
+            android:layout_width="1dp"
+            android:layout_height="5dp"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_sp_defense"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_sp_defense"
+            tools:backgroundTint="@color/black" />
+
+        <ImageView
+            android:id="@+id/progress_speed"
+            android:layout_width="1dp"
+            android:layout_height="5dp"
+            android:background="@drawable/background_stats"
+            app:layout_constraintBottom_toBottomOf="@id/txt_speed"
+            app:layout_constraintStart_toStartOf="@id/progress_hp"
+            app:layout_constraintTop_toTopOf="@id/txt_speed"
+            tools:backgroundTint="@color/black" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

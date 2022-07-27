@@ -25,10 +25,6 @@ public class Pokemon {
     private ArrayList<StatPokemon> pokemonStrength;
 
 
-    public ArrayList<StatPokemon> getStats() {
-        return pokemonStrength;
-    }
-
     public String getIdFormated() {
         return "#" + id;
     }
@@ -38,7 +34,7 @@ public class Pokemon {
     }
 
     public String getName() {
-        return name;
+        return name.substring(0,1).toUpperCase().concat(name.substring(1));
     }
 
     public String getHeight() {
@@ -82,5 +78,29 @@ public class Pokemon {
         String baseCodeImage = "background_";
         String backgroundType = characteristic.get(0).getType().getName();
         return baseCodeImage + backgroundType;
+    }
+
+    public int getStatHp(){
+        return pokemonStrength.get(0).getBase_stat();
+    }
+
+    public int getStatAttack(){
+        return pokemonStrength.get(1).getBase_stat();
+    }
+
+    public int getStatDefense(){
+        return pokemonStrength.get(2).getBase_stat();
+    }
+
+    public int getStatSpAttack(){
+        return pokemonStrength.get(3).getBase_stat();
+    }
+
+    public int getStatSpDefense(){
+        return pokemonStrength.get(4).getBase_stat();
+    }
+
+    public int getStatSpeed(){
+        return pokemonStrength.get(5).getBase_stat();
     }
 }

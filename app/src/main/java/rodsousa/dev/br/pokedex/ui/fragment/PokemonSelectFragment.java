@@ -1,13 +1,19 @@
 package rodsousa.dev.br.pokedex.ui.fragment;
 
+import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -77,7 +83,54 @@ public class PokemonSelectFragment extends DialogFragment {
 
             binding.txtValueHeight.setText(pokemon.getHeight());
             binding.txtValueWeight.setText(pokemon.getWeight());
+
+
+
+            ColorStateList colorStateList = ColorStateList.valueOf(ContextCompat.getColor(getContext(), idColorPrimary));
+
+            binding.progressHp.setBackgroundTintList(colorStateList);
+            binding.progressAttack.setBackgroundTintList(colorStateList);
+            binding.progressDefense.setBackgroundTintList(colorStateList);
+            binding.progressSpAttack.setBackgroundTintList(colorStateList);
+            binding.progressSpDefense.setBackgroundTintList(colorStateList);
+            binding.progressSpeed.setBackgroundTintList(colorStateList);
+
+            binding.backgroundProgressHp.setBackgroundTintList(colorStateList);
+            binding.backgroundProgressAttack.setBackgroundTintList(colorStateList);
+            binding.backgroundProgressDefense.setBackgroundTintList(colorStateList);
+            binding.backgroundProgressSpAttack.setBackgroundTintList(colorStateList);
+            binding.backgroundProgressSpDefense.setBackgroundTintList(colorStateList);
+            binding.backgroundProgressSpeed.setBackgroundTintList(colorStateList);
+
+            int statHp = pokemon.getStatHp();
+            int statAttack = pokemon.getStatAttack();
+            int statDefense = pokemon.getStatDefense();
+            int statSpAttack = pokemon.getStatSpAttack();
+            int statSpDefense = pokemon.getStatSpDefense();
+            int statSpeed = pokemon.getStatSpeed();
+
+            Log.i("TAG", "" + pokemon.getStatSpAttack());
+
+            binding.progressHp.setLayoutParams(percentSizeStats(statHp, binding.progressHp));
+            binding.progressAttack.setLayoutParams(percentSizeStats(statAttack, binding.progressAttack));
+            binding.progressDefense.setLayoutParams(percentSizeStats(statDefense, binding.progressDefense));
+            binding.progressSpAttack.setLayoutParams(percentSizeStats(statSpAttack, binding.progressSpAttack));
+            binding.progressSpDefense.setLayoutParams(percentSizeStats(statSpDefense, binding.progressSpDefense));
+            binding.progressSpeed.setLayoutParams(percentSizeStats(statSpeed, binding.progressSpeed));
         }
+    }
+
+    public ViewGroup.LayoutParams percentSizeStats(int value, ImageView imageView){
+        //TODO util e definir constants maximo
+        int valueFormatedDp = (220*value)/110;
+
+        if (valueFormatedDp > 220){
+            valueFormatedDp = 220;
+        }
+
+        ViewGroup.LayoutParams params = (ViewGroup.LayoutParams) imageView.getLayoutParams();
+        params.width = (int) (valueFormatedDp * getContext().getResources().getDisplayMetrics().density);
+        return params;
     }
 
     @Override
