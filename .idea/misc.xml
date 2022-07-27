@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2495" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable-v24/layout/activity_lista_pokemon.xml" value="0.3359375" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/background_btn_red.xml" value="0.248" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/background_fire.xml" value="0.255" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/background_pokemon_select.xml" value="0.2475" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/background_red.xml" value="0.2895" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/dgdfg.xml" value="0.2095" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/edt_search.xml" value="0.276" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/ic_icon_bug.xml" value="0.2495" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/ic_luzes.xml" value="0.2895" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/ic_search.xml" value="0.276" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/ic_type_fighting.xml" value="0.2495" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/ic_type_fire.xml" value="0.2475" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/pokemon_example.xml" value="0.2495" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/pokemon_exemple.xml" value="0.307" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/drawable/splash_bg.xml" value="0.2605" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/layout/activity_lista.xml" value="0.33" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/layout/activity_lista_pokemon.xml" value="0.21364690294799601" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/layout/activity_main.xml" value="0.3359375" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/layout/activity_splash.xml" value="0.3359375" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/layout/fragment_pokemon_select.xml" value="0.33" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/layout/item_pokemon.xml" value="0.3359375" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/layout/teste.xml" value="0.33" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2605" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Pokedex/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2605" />
+        <entry key="..\:/Users/rodsousa/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/auto_complete_list.xml" value="0.3359375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

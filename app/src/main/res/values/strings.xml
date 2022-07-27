@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="select_pokemon">Pesquise ou selecione um Pokémon</string>
+    <string name="search_name">Pesquise por nome ou código</string>
+</resources>

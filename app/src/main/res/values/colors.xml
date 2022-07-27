@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="light_grey">#E4E4E4</color>
+    <color name="light_grey2">#f7f7f7</color>
+    <color name="grey">#808080</color>
+    <color name="dark_red">#A51B0B</color>
+    <color name="dark_red2">#8B0000</color>
+    <color name="trans">#00000000 </color>
+
+    <color name="type_normal">#808080</color>
+    <color name="type_fighting">#E0306A</color>
+    <color name="type_fire">#FF9741</color>
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+<!--    <color name="dark_red2">#8B0000</color>-->
+
+
+</resources>
