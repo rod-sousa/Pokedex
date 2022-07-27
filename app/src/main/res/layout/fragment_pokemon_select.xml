@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="400dp"
             android:scaleType="matrix"
-            android:src="@drawable/background_fighting"
+            android:src="@drawable/background_fairy"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
