@@ -122,7 +122,7 @@ public class PokemonSelectFragment extends DialogFragment {
 
     public ViewGroup.LayoutParams percentSizeStats(int value, ImageView imageView){
         //TODO util e definir constants maximo
-        int valueFormatedDp = (220*value)/110;
+        int valueFormatedDp = (220*value)/130;
 
         if (valueFormatedDp > 220){
             valueFormatedDp = 220;
