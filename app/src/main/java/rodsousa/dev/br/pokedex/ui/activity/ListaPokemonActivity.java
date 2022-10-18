@@ -2,7 +2,6 @@ package rodsousa.dev.br.pokedex.ui.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -24,10 +23,10 @@ import rodsousa.dev.br.pokedex.ui.viewmodel.PokemonViewModel;
 
 public class ListaPokemonActivity extends AppCompatActivity {
 
-    private ActivityListaPokemonBinding binding = null;
-    private PokemonViewModel viewModel = null;
-    private ListAdapter adapterList = null;
-    private GridLayoutManager layoutManager = null;
+    private ActivityListaPokemonBinding binding;
+    private PokemonViewModel viewModel;
+    private ListAdapter adapterList;
+    private GridLayoutManager layoutManager;
     private boolean instanceIsSearch = false;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +53,6 @@ public class ListaPokemonActivity extends AppCompatActivity {
         binding.icSearch.setOnClickListener(view -> {
             String edtText = binding.edtSearch.getText().toString().trim();
             if (!edtText.equals("")) {
-
                 instanceIsSearch = true;
                 viewModel.searchPokemon(edtText);
                 binding.buttonLoadMore.setVisibility(View.INVISIBLE);
@@ -75,12 +73,9 @@ public class ListaPokemonActivity extends AppCompatActivity {
 
     private void setListOnAdapter(ArrayList<Pokemon> pokemonList) {
         if (adapterList == null) {
-            adapterList = new ListAdapter(this, pokemonList, new ListAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClick(Pokemon pokemon) {
-                    viewModel.pokemonSelect(pokemon);
-                    showDialog();
-                }
+            adapterList = new ListAdapter(this, pokemonList, pokemon -> {
+                viewModel.pokemonSelect(pokemon);
+                showDialog();
             });
             binding.recyclerView.setAdapter(adapterList);
         } else {
@@ -145,7 +140,6 @@ public class ListaPokemonActivity extends AppCompatActivity {
 
     private void showDialog() {
         FragmentManager fragmentManager = getSupportFragmentManager();
-
         PokemonSelectFragment dialogFragmentPokemon = new PokemonSelectFragment();
         dialogFragmentPokemon.setStyle(DialogFragment.STYLE_NORMAL, R.style.AppDialogTheme);
         dialogFragmentPokemon.show(fragmentManager, "customDialog");

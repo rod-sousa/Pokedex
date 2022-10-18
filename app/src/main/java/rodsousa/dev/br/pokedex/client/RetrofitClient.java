@@ -7,7 +7,7 @@ public class RetrofitClient {
 
     private static Retrofit RETROFIT;
 
-    private static String BASE_URL = "https://pokeapi.co/api/v2/";
+    private static final String BASE_URL = "https://pokeapi.co/api/v2/";
 
     public static Retrofit getRETROFIT(){
 

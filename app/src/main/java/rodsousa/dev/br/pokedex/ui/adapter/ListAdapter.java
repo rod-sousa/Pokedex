@@ -1,8 +1,6 @@
 package rodsousa.dev.br.pokedex.ui.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,12 +53,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
     }
 
     public void updateListAdapter(ArrayList<Pokemon> listPokemon) {
-        Log.i("TAG", "" + listPokemon.size());
         this.listaPokemon = listPokemon;
         notifyDataSetChanged();
     }
-
-//////////////////////////////////////////////////////////////////
 
     public static class ListViewHolder extends RecyclerView.ViewHolder {
 
@@ -76,12 +71,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         }
 
         public void binds(Pokemon pokemon, OnItemClickListener listener, Context context) {
-            preencheCampos(pokemon, context);
+            fillInFields(pokemon, context);
 
             itemView.setOnClickListener(view -> listener.onItemClick(pokemon));
         }
 
-        private void preencheCampos(Pokemon pokemon, Context context) {
+        private void fillInFields(Pokemon pokemon, Context context) {
             namePokemon.setText(pokemon.getName());
             idPokemon.setText(pokemon.getIdFormated());
 

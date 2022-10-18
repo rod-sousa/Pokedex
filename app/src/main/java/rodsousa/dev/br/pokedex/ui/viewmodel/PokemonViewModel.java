@@ -36,18 +36,20 @@ public class PokemonViewModel extends ViewModel {
         call = methods.searchPokemon(pokemon);
         call.enqueue(new Callback<Pokemon>() {
             @Override
-            public void onResponse(Call<Pokemon> call, Response<Pokemon> response) {
+            public void onResponse(@NonNull Call<Pokemon> call, @NonNull Response<Pokemon> response) {
                 if (response.isSuccessful()) {
                     listPokemon.add(response.body());
                     _listPokemon.setValue(listPokemon);
                 } else {
-                    //TODO
+                    //TODO -- error message
+                    Log.e("TAG", "onResponse: " + response.code());
                 }
             }
 
             @Override
-            public void onFailure(Call<Pokemon> call, Throwable t) {
-                //TODO
+            public void onFailure(@NonNull Call<Pokemon> call, @NonNull Throwable t) {
+                //TODO -- error message
+                Log.e("TAG", "onFailure: " + t.getLocalizedMessage());
             }
         });
     }
@@ -66,13 +68,15 @@ public class PokemonViewModel extends ViewModel {
                         }
 
                     } else {
-                        //TODO
+                        //TODO -- error message
+                        Log.e("TAG", "onResponse: " + response.code());
                     }
                 }
 
                 @Override
                 public void onFailure(@NonNull Call<Pokemon> call, @NonNull Throwable t) {
-                    //TODO
+                    //TODO -- error message
+                    Log.e("TAG", "onFailure: " + t.getLocalizedMessage());
                 }
             });
         }
