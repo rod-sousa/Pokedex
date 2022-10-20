@@ -13,4 +13,30 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="background_top">
+        <item name="android:background">@color/dark_mode1</item>
+    </style>
+
+    <style name="text_hint">
+        <item name="android:textColorHint">#CBCBCB</item>
+    </style>
+
+    <style name="background_item">
+        <item name="android:background">@color/dark_mode3</item>
+    </style>
+
+    <style name="background_recycler">
+        <item name="android:background">@color/dark_mode2</item>
+    </style>
+
+    <style name="text_name">
+        <item name="android:textColor">#CBCBCB</item>
+    </style>
+
+    <style name="text_button">
+        <item name="android:textColor">#CBCBCB</item>
+    </style>
+
+
 </resources>

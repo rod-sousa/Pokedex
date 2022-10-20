@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginStart="12dp"
-    android:layout_marginTop="12dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_marginTop="12dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/background_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -15,9 +16,9 @@
             android:id="@+id/imagem_pokemon"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -27,40 +28,38 @@
             android:id="@+id/id_pokemon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/grey"
-            android:textSize="14sp"
-            android:fontFamily="@font/nunito_bold"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            tools:text="#038"
-            app:layout_constraintTop_toBottomOf="@id/imagem_pokemon"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintTop_toBottomOf="@id/imagem_pokemon"
+            tools:text="#038" />
 
         <TextView
             android:id="@+id/nome_pokemon"
+            style="@style/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:fontFamily="@font/nunito_bold"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            tools:text="Clefairy"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/id_pokemon"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintTop_toBottomOf="@id/id_pokemon"
+            tools:text="Clefairy" />
 
         <ImageView
             android:id="@+id/type_pokemon"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            tools:src="@drawable/ic_type_normal"
             android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/nome_pokemon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/nome_pokemon"/>
+            tools:src="@drawable/ic_type_normal" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
