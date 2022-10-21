@@ -68,6 +68,7 @@ public class ListaPokemonActivity extends AppCompatActivity {
 
     private void setRecycler() {
         layoutManager = new GridLayoutManager(this, 2);
+//        layoutManager.set
         binding.recyclerView.setLayoutManager(layoutManager);
     }
 
