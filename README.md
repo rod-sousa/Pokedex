@@ -27,7 +27,7 @@ IU dos seus layouts a fontes de dados do app usando um formato declarativo, em v
 
 ## Demonstração
 
-https://user-images.githubusercontent.com/95924639/197292868-a043dbcf-7c21-40bf-b965-0b35bc5c425c.mp4
+https://user-images.githubusercontent.com/95924639/197558348-ee985490-0284-449d-8bac-2a9fbb122a1f.mp4
 
 ## Open API
 
