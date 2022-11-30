@@ -2,6 +2,7 @@ package rodsousa.dev.br.pokedex.ui.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -68,7 +69,6 @@ public class ListaPokemonActivity extends AppCompatActivity {
 
     private void setRecycler() {
         layoutManager = new GridLayoutManager(this, 2);
-//        layoutManager.set
         binding.recyclerView.setLayoutManager(layoutManager);
     }
 
@@ -137,6 +137,12 @@ public class ListaPokemonActivity extends AppCompatActivity {
 
             handler.postDelayed(() -> binding.loadingAnimation.setVisibility(View.GONE), 1000);
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        viewModel.resetPokemonList();
     }
 
     private void showDialog() {

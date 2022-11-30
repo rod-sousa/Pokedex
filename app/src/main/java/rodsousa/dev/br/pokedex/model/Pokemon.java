@@ -1,12 +1,8 @@
 package rodsousa.dev.br.pokedex.model;
 
-import android.util.Log;
-
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
-
-import rodsousa.dev.br.pokedex.R;
 
 public class Pokemon {
     private int id;
